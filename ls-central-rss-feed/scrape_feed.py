@@ -44,13 +44,18 @@ USER_AGENT = (
 
 
 def fetch_rendered(page, url):
-    page.goto(url, wait_until="networkidle", timeout=30000)
+    # The site embeds a support-chat widget that polls continuously, so it
+    # never reaches "networkidle". Wait for the DOM instead, then give any
+    # client-side rendering (the hotfix tables) a moment to finish.
+    page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(2000)
     return page.inner_text("body")
 
 
 def find_links(page, url, href_pattern):
     """Return [(href, link_text)] for links on `url` whose href matches href_pattern."""
-    page.goto(url, wait_until="networkidle", timeout=30000)
+    page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(2000)
     anchors = page.eval_on_selector_all(
         "a[href]",
         "els => els.map(e => ({href: e.getAttribute('href'), text: e.innerText}))",
