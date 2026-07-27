@@ -2,9 +2,8 @@ name: Update LS Central RSS feed
 
 on:
   schedule:
-    # Runs every 6 hours. Edit this if you want it more/less frequent.
     - cron: "0 */6 * * *"
-  workflow_dispatch: {}   # lets you click "Run workflow" manually in the Actions tab
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -12,6 +11,9 @@ permissions:
 jobs:
   update-feed:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ls-central-rss-feed
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
