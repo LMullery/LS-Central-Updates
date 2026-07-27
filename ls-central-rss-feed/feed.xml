@@ -3,7 +3,7 @@
 <title>LS Central Release Notes &amp; Hotfixes (BC4 internal feed)</title>
 <link>https://help.lscentral.lsretail.com/Content/Release-Notes-LS-Central/Release-Notes-LS-Central.htm</link>
 <description>Unofficial feed generated from the official LS Retail online help site. Tracks the latest LS Central release notes and hotfixes for tracked versions.</description>
-<lastBuildDate>Mon, 27 Jul 2026 14:43:17 +0000</lastBuildDate>
+<lastBuildDate>Mon, 27 Jul 2026 14:52:30 +0000</lastBuildDate>
 <item><title>LS Central 28.1 Release Notes</title><link>https://help.lscentral.lsretail.com/Content/Release-Notes-LS-Central/LS-Central-28-1-Release-Notes.htm</link><guid isPermaLink="false">release-LS Central 28.1 Release Notes</guid><pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate><description>Released - July 2, 2026 This version is built on Microsoft Dynamics 365 Business Central 2026, release wave 1. For more details about this BC major version see: https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/whatsnew/whatsnew-update-28-1</description></item>
 <item><title>LS Central 28.0 Release Notes</title><link>https://help.lscentral.lsretail.com/Content/Release-Notes-LS-Central/Release-Notes-2026/LS-Central-28-0-Release-Notes.htm</link><guid isPermaLink="false">release-LS Central 28.0 Release Notes</guid><pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate><description>Released - April 13, 2026 This version is built on Microsoft Dynamics 365 Business Central 2026, release wave 1. For more details about this BC major version see: https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/whatsnew/whatsnew-update-28-0</description></item>
 </channel></rss>
