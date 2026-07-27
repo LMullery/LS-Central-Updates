@@ -173,7 +173,7 @@ def main():
             all_items.append(parse_release_note_page(text, url, link_text))
 
         # --- Hotfix pages, most recent N versions ---
-        hotfix_links = find_links(page, HOTFIXES_INDEX, re.compile(r"/Content/Hotfixes/Hotfixes-[\d-]+\.htm$"))[
+        hotfix_links = find_links(page, HOTFIXES_INDEX, re.compile(r"Hotfixes-[\d-]+\.htm$"))[
             :VERSIONS_TO_TRACK
         ]
 
