@@ -21,6 +21,7 @@ assign, which is stable across runs.
 import re
 import sys
 from datetime import datetime, timezone
+from urllib.parse import urljoin
 from xml.sax.saxutils import escape
 
 from playwright.sync_api import sync_playwright
@@ -65,7 +66,7 @@ def find_links(page, url, href_pattern):
     for a in anchors:
         href = a.get("href") or ""
         if href_pattern.search(href):
-            full = href if href.startswith("http") else f"{BASE}/Content/Release-Notes-LS-Central/{href}"
+            full = urljoin(url, href)
             if full not in seen:
                 seen.add(full)
                 out.append((full, a.get("text", "").strip()))
